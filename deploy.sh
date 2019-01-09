@@ -7,7 +7,9 @@ git pull
 find . ! -path '*/\.*' ! -name 'CNAME' ! -name 'deploy.sh' -type f -exec rm -f {} +
 cp ~/blockslack/deploy/* .
 cp ~/blockslack/server/* server/
-zip -D server/server.zip server/*
+cd server
+zip ../server.zip *
+cd ..
 git add -u :/
 git add *
 git commit -a -m "Deployment"
