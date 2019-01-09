@@ -8,7 +8,7 @@ find . ! -path '*/\.*' ! -name 'CNAME' ! -name 'deploy.sh' -type f -exec rm -f {
 cp ~/blockslack/deploy/* .
 cp ~/blockslack/server/* server/
 cd server
-zip ../server.zip *
+zip ../server.zip -r * .[^.]* 
 cd ..
 git add -u :/
 git add *
