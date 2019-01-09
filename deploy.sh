@@ -9,6 +9,7 @@ cp ~/blockslack/deploy/* .
 cp -r ~/blockslack/server/ server/
 cd server
 rm -R node_modules/
+rm .DS_Store
 zip ../server.zip -r * .[^.]* 
 cd ..
 git add -u :/
