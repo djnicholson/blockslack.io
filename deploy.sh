@@ -6,7 +6,7 @@ mkdir server 2>/dev/null
 git pull
 find . ! -path '*/\.*' ! -name 'CNAME' ! -name 'deploy.sh' -type f -exec rm -f {} +
 cp ~/blockslack/deploy/* .
-cp ~/blockslack/server/* server/
+cp -R ~/blockslack/server/* server/
 cd server
 zip ../server.zip -r * .[^.]* 
 cd ..
