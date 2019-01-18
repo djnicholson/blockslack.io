@@ -7,7 +7,8 @@
     </head>
     <body style="background-color: #321325">
         <script>
-            parent.postMessage("child frame", "*");
+            var queryString = window.location.search;
+            window.location = "blockslack://auth" + queryString;
         </script>
     </body>
 </html>
